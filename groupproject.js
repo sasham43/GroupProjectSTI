@@ -23,11 +23,10 @@ function Employee(name, employeeNumber, salary, rating){
 }
 
 var employees = [atticus, jem, boo, scout];
-var employeeObjects = [];
 
 for (var it = 0; it < employees.length; it++){
   var tempEmployee = new Employee(employees[it][0], employees[it][1], employees[it][2], employees[it][3]);
-  employeeObjects.push(tempEmployee);
+  employees[it] = tempEmployee;
 }
 
 // new array [name,%, total comp, total bonus]  just for our reference!!
@@ -39,7 +38,7 @@ for (var it = 0; it < employees.length; it++){
 // console.log("Boo", generating(boo));
 
 for ( var i = 0; i < employees.length; i++) {
-  console.log(generating(employeeObjects[i]));
+  console.log(generating(employees[i]));
 }
 
 function calcBonus(person) {
