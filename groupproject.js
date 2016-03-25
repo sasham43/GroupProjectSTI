@@ -1,8 +1,19 @@
 
-var atticus = ["Atticus", "2405", "47000", 3];
-var jem = ["Jem", "62347", "63500", 4];
-var boo = ["Boo", "11435", "54000", 3];
-var scout = ["Scout", "6243", "74750", 5];
+// var atticus = ["Atticus", "2405", "47000", 3];
+// var jem = ["Jem", "62347", "63500", 4];
+// var boo = ["Boo", "11435", "54000", 3];
+// var scout = ["Scout", "6243", "74750", 5];
+
+var atticus = {
+  name: 'Atticus',
+  employeeNumber: '2405',
+  salary: '47000',
+  rating: 3
+};
+
+var jem = {name: "Jem", employeeNumber: "62347", salary: "63500", rating: 4};
+var boo = {name: "Boo", employeeNumber: "11435", salary: "54000", rating: 3};
+var scout = {name: "Scout", employeeNumber: "6243", salary: "74750", rating: 5};
 
 var employees = [atticus, jem, boo, scout];
 
