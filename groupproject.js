@@ -15,13 +15,6 @@ var scout = ["Scout", "6243", "74750", 5];
 // var boo = {name: "Boo", employeeNumber: "11435", salary: "54000", rating: 3};
 // var scout = {name: "Scout", employeeNumber: "6243", salary: "74750", rating: 5};
 
-function Employee(name, employeeNumber, salary, rating){
-  this.name = name;
-  this.employeeNumber = employeeNumber;
-  this.salary = salary;
-  this.rating = rating;
-}
-
 var employees = [atticus, jem, boo, scout];
 
 for (var it = 0; it < employees.length; it++){
@@ -81,10 +74,10 @@ function calcBonus(person) {
 //console.log(calcBonus(atticus));
 
 function generating(person){
-  var salary=parseInt(person.salary);
-  var bonusPercent=calcBonus(person);
-  var totalBonus=Math.round(bonusPercent * salary);
-  var totalComp=totalBonus + salary;
+  var salary = parseInt(person.salary);
+  var bonusPercent = calcBonus(person);
+  var totalBonus = Math.round(bonusPercent * salary);
+  var totalComp = totalBonus + salary;
 
   var employee = {};
 
@@ -94,4 +87,11 @@ function generating(person){
   employee.totalComp = totalComp;
 
   return employee;
+}
+
+function Employee(name, employeeNumber, salary, rating){
+  this.name = name;
+  this.employeeNumber = employeeNumber;
+  this.salary = salary;
+  this.rating = rating;
 }
