@@ -30,10 +30,10 @@ for ( var i = 0; i < employees.length; i++) {
 }
 
 function calcBonus(person) {
-  var name = person[0];
-  var employeeNumber = person[1];
-  var salary = parseInt(person[2]);
-  var rating=person[3];
+  var name = person.name;
+  var employeeNumber = person.employeeNumber;
+  var salary = parseInt(person.salary);
+  var rating=person.rating;
 
   var bonusPercent=0;
 
@@ -69,15 +69,17 @@ function calcBonus(person) {
 //console.log(calcBonus(atticus));
 
 function generating(person){
-  var salary=parseInt(person[2]);
+  var salary=parseInt(person.salary);
   var bonusPercent=calcBonus(person);
   var totalBonus=Math.round(bonusPercent * salary);
   var totalComp=totalBonus + salary;
-  var newArray=[];
 
-  newArray.push(person[0]);
-  newArray.push(bonusPercent);
-  newArray.push(totalComp);
-  newArray.push(totalBonus);
-  return newArray;
+  var employee = {};
+
+  employee.name = person.name;
+  employee.bonusPercent = bonusPercent;
+  employee.totalBonus = totalBonus;
+  employee.totalComp = totalComp;
+
+  return employee;
 }
